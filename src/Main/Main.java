@@ -1,4 +1,6 @@
-    import java.time.LocalDate;
+package Main;
+
+import java.time.LocalDate;
     import java.util.Arrays;
     import java.util.List;
     import java.util.Scanner;
@@ -94,13 +96,13 @@
                 reg=false;
                 return;
             }
-            System.out.println("\n***Movie Listing Application***");
+            System.out.println("\n***Main.Movie Listing Application***");
             System.out.println("\n===Dashboard===");
             System.out.println("1. Search Movies");
-            System.out.println("2. Get Movie Details");
-            System.out.println("3. Add Movie to Favorites");
-            System.out.println("4. Remove Movie from Favorites");
-            System.out.println("5. Get User Details");
+            System.out.println("2. Get Main.Movie Details");
+            System.out.println("3. Add Main.Movie to Favorites");
+            System.out.println("4. Remove Main.Movie from Favorites");
+            System.out.println("5. Get Main.User Details");
             System.out.println("6. Search Favorites");
             System.out.println("7. Show all Movies");
             System.out.println("8. Add Movies");
@@ -114,7 +116,7 @@
             System.out.print("Enter your email: ");
             userEmail = scanner.nextLine();
             movieListing.registerUser(userEmail);
-            System.out.println("User registered successfully.");
+            System.out.println("Main.User registered successfully.");
 
         }
 
@@ -147,7 +149,7 @@
                 System.out.println("Release Date: " + movie.getReleaseDate());
                 System.out.println("Budget: $" + movie.getBudget());
             } else {
-                System.out.println("Movie not found.");
+                System.out.println("Main.Movie not found.");
             }
         }
 
@@ -163,7 +165,7 @@
             String movieTitle = scanner.nextLine();
 
             movieListing.addToFavorites(userEmail, movieTitle);
-            System.out.println("Movie added to favorites.");
+            System.out.println("Main.Movie added to favorites.");
         }
 
         private static void removeFromFavorites() {
@@ -177,7 +179,7 @@
             String movieTitle = scanner.nextLine();
 
             movieListing.removeFromFavorites(userEmail, movieTitle);
-            System.out.println("Movie removed from favorites.");
+            System.out.println("Main.Movie removed from favorites.");
         }
 
         private static void getUserDetails() {
@@ -195,7 +197,7 @@
                     System.out.println("- " + movie.getTitle());
                 }
             } else {
-                System.out.println("User not found.");
+                System.out.println("Main.User not found.");
                 reg=false;
             }
         }
@@ -258,6 +260,6 @@
             scanner.nextLine(); // consume newline
 
             movieListing.addMovie(title, cast, category, releaseDate, budget);
-            System.out.println("Movie added successfully.");
+            System.out.println("Main.Movie added successfully.");
         }
     }
